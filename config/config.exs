@@ -16,7 +16,8 @@ config :ex_aws,
     scheme: "https://",
     host: "#{System.get_env("BUCKET_NAME")}.s3.amazonaws.com",
     region: "sa-east-1"
-  ]
+  ],
+  bucket_name: "#{System.get_env("BUCKET_NAME")}"
 
 # Configures the endpoint
 config :s3_aws, S3AwsWeb.Endpoint,
